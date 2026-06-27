@@ -85,6 +85,19 @@ The system analyzes the startup idea, searches for competitors, estimates financ
 
 ---
 
+## 🏢 Supported Business Types
+
+FounderAI supports different startup types and adapts the generated plan based on the selected business category.
+
+| 🏷️ Business Type | 📌 Example Output                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------------- |
+| Cafe / Restaurant | Menu items, customer packages, pricing, delivery, and marketing ideas                       |
+| Store             | Product categories, inventory allocation, online orders, bundles, and sales strategy        |
+| App               | App development budget, subscription plans, premium features, and user acquisition strategy |
+| Company           | Service packages, client projects, tools, hiring, and monthly support contracts             |
+
+---
+
 ## 🧑‍💻 Human Review Loop
 
 FounderAI includes a **human-in-the-loop review step** to make the planning process more interactive and accurate.
@@ -94,27 +107,30 @@ If the user is not satisfied with the generated plan, they can select **Not Appr
 * Adding more financial details
 * Improving the marketing strategy
 * Making the plan more realistic for the budget
-* Changing the target customers
+* Clarifying the target customers
 * Including stronger competitor analysis
+* Improving pricing or revenue calculations
 * Clarifying the launch steps
 
-This feedback helps the revision agent understand what needs to be changed before generating a new version of the business plan.
+The system then uses this feedback to revise the plan while keeping the startup details, business type, and budget allocation consistent unless the user explicitly requests a change.
 
 ---
 
 ## 🚀 Key Features
 
-| 💡 Feature                 | ✨ Description                                                      |
-| -------------------------- | ------------------------------------------------------------------ |
-| 🤖 Multi-Agent Workflow    | Uses specialized agents for different business planning tasks      |
-| 📊 Scenario-Based Planning | Generates plans based on optimistic, baseline, or crisis scenarios |
-| 🔍 Live Competitor Search  | Uses Tavily Search API to find real competitor insights            |
-| 💰 Financial Calculations  | Provides basic financial planning and budget analysis              |
-| ⚠️ Risk Analysis           | Identifies potential business risks and challenges                 |
-| 📣 Marketing Strategy      | Suggests marketing approaches based on the business idea           |
-| 👩‍💻 Human-in-the-Loop    | Allows the user to approve the plan or request improvements        |
-| 🔁 Feedback-Based Revision | Regenerates the plan based on the user’s additional information    |
-| 🌐 Gradio Web Interface    | Provides an interactive and easy-to-use interface                  |
+| 💡 Feature                      | ✨ Description                                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 🤖 Multi-Agent Workflow         | Uses specialized agents for different business planning tasks                                                       |
+| 📊 Scenario-Based Planning      | Generates plans based on optimistic, baseline, or crisis scenarios                                                  |
+| 🏢 Business-Type-Aware Planning | Adapts the business plan based on the selected business type, such as App, Store, Company, Cafe, or Restaurant      |
+| 🔍 Live Competitor Search       | Uses Tavily Search API to find real competitor insights                                                             |
+| 💰 Financial Calculations       | Provides budget allocation and financial planning based on the startup budget                                       |
+| 📌 Customized Budget Allocation | Adjusts budget categories depending on the business type, such as app development, inventory, tools, or store setup |
+| ⚠️ Risk Analysis                | Identifies potential business risks and challenges                                                                  |
+| 📣 Marketing Strategy           | Suggests marketing approaches based on the business idea                                                            |
+| 👩‍💻 Human-in-the-Loop         | Allows the user to approve the plan or request improvements                                                         |
+| 🔁 Feedback-Based Revision      | Regenerates the plan based on the user’s additional information                                                     |
+| 🌐 Gradio Web Interface         | Provides an interactive and easy-to-use interface                                                                   |
 
 ---
 
@@ -148,9 +164,11 @@ This feedback helps the revision agent understand what needs to be changed befor
 
 ## 📌 Example Scenario
 
-A user enters a startup idea for a **study-focused cafe in Riyadh**.
+A user enters a startup idea such as a **productivity app**, **beauty store**, or **digital services company** in Riyadh.
 
-FounderAI analyzes the market, competitors, budget, risks, and marketing strategy, then generates a structured business plan. If the user selects **Not Approved**, they can write feedback such as requesting more realistic costs, clearer target customers, or a stronger marketing strategy. The system then uses this feedback to revise the scenario and regenerate an improved final plan.
+FounderAI analyzes the market, competitors, budget, risks, and marketing strategy, then generates a structured business plan. The plan adapts based on the selected business type. For example, an app idea may include subscription plans and user acquisition costs, while a store idea may include inventory, product bundles, and online sales.
+
+If the user selects **Not Approved**, they can write feedback such as requesting more realistic pricing, clearer target customers, stronger marketing ideas, or improved revenue calculations. The system then uses this feedback to regenerate an improved final plan.
 
 ---
 
